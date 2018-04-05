@@ -2,7 +2,7 @@ class PigLatinizer
   attr_accessor :text, :result
   attr_reader :sentence, :word
   
-  def initialize(text=nil)
+  def initialize
     @text = text
     @result = piglatinize
   end
