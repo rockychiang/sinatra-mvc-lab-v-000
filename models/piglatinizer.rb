@@ -9,7 +9,7 @@ class PigLatinizer
   
   private
   
-  def platinizer
+  def piglatinize
     @sentence = @text.split(" ")
     @sentence.map do |word|
       if word.downcase.start_with?("a","e","i","o","u")
