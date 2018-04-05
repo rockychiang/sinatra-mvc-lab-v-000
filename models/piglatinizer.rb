@@ -12,7 +12,7 @@ class PigLatinizer
   def platinizer
     @sentence = @text.split(" ")
     @sentence.map do |word|
-      if word.start_with?("a","e","i","o","u")
+      if word.downcase.start_with?("a","e","i","o","u")
         word + "way"
       else
         @word = word.split("")
