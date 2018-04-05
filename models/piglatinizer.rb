@@ -16,7 +16,7 @@ class PigLatinizer
         word + "way"
       else
         @word = word.split("")
-        while @word.downcase.start_with?("a","e","i","o","u")
+        while @word.start_with?("a","e","i","o","u")
           @word << @word.shift
         end
         @word.join("") + "ay"
