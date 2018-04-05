@@ -17,7 +17,7 @@ class PigLatinizer
         word + "way"
       else
         @word = word.split("")
-        while VOWELS.include?(@word[0])
+        while VOWELS.include?(@word[0].downcase)
           @word << @word.shift
         end
         @word.join("") + "ay"
