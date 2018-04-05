@@ -1,0 +1,27 @@
+class PigLatinizer
+  attr_accessor :text, :result
+  attr_reader :sentence, :word
+  
+  def initialize(text)
+    @text = text
+    @result = platinizer
+  end
+  
+  private
+  
+  def platinizer
+    @sentence = @text.split(" ")
+    @sentence.map do |word|
+      if word[0] == /[aeoui]/
+        word + "way"
+      else
+        @word = word.split("")
+        while @word[0].downcase != /[aeoui]/
+          @word << @word.shift
+        end
+        @word.join("") + "ay"
+      end
+    end.join(" ")
+  end
+  
+end
