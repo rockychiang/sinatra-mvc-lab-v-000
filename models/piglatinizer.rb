@@ -3,7 +3,6 @@ class PigLatinizer
   attr_reader :sentence, :word
   
   def piglatinize(text)
-    @text = text
     @sentence = text.split(" ")
     @sentence.map do |word|
       if word.downcase.start_with?("a","e","i","o","u")
