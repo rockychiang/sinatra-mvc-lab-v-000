@@ -17,7 +17,7 @@ class PigLatinizer
         word + "way"
       else
         @word = word.split("")
-        while @word.start_with?("a","e","i","o","u")
+        while VOWELS.include?(@word[0])
           @word << @word.shift
         end
         @word.join("") + "ay"
