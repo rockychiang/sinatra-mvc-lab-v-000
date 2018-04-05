@@ -7,8 +7,6 @@ class PigLatinizer
     @result = piglatinize
   end
   
-  private
-  
   def piglatinize
     @sentence = @text.split(" ")
     @sentence.map do |word|
