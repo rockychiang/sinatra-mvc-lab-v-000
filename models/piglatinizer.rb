@@ -4,7 +4,7 @@ class PigLatinizer
   
   def initialize(text)
     @text = text
-    @result = platinize
+    @result = piglatinize
   end
   
   private
