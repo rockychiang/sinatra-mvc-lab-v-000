@@ -21,6 +21,7 @@ class PigLatinizer
           @word << @word.shift
         end
         @word.join("") + "ay"
+        binding.pry
       end
     end.join(" ")
   end
