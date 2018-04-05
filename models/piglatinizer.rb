@@ -1,6 +1,7 @@
 class PigLatinizer
   attr_accessor :text, :result
   attr_reader :sentence, :word
+  VOWELS = ["a", "e", "i", "o", "u"]
   
   def initialize(text)
     @text = text
