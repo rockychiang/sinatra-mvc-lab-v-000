@@ -15,10 +15,10 @@ class PigLatinizer
       if word.downcase.start_with?("a","e","i","o","u")
         word + "way"
       else
+        binding.pry
         @word = word.split("")
         while %w(a e i o u).include?(@word[0].downcase)
           @word << @word.shift
-          binding.pry
         end
         @word.join("") + "ay"
       end
