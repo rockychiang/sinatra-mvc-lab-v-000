@@ -1,5 +1,5 @@
 class PigLatinizer
-  attr_accessor :text, :result
+  attr_accessor :result
   attr_reader :sentence, :word
   
   def piglatinize(text)
